@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="hu">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Open Water Tournament</title>
+      <meta name="description" content="Az Open Water Tournament (OWT) egy egyedülálló nyíltvízi úszó versenysorozat, mely Magyarország vízi környezetét térképezi fel és használja sportolásra.">
+      <meta property="og:title" content="Open Water Tournament" />
+      <meta property="og:type" content="website" />
+   <!--   <meta property="og:url" content="{{Request::url()}}" />-->
+      <meta property="og:image" content="http://openwatertournament.hu/img/fb_profile.png" />
+      <meta property="og:image:width" content="320" />
+      <meta property="og:image:height" content="320" />
+      <link rel="stylesheet" href="includes/jquery.fancybox.min.css" media="screen">
+      <link href="includes/oww2024.css?2" rel="stylesheet" type="text/css">
+      <link rel="icon" type="image/png" href="/img/favicon.png">
+      <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KFK595P');</script>
+      <!-- End Google Tag Manager -->
+      <style>
+         .red-reg-overlay {background: #222637!important;
+  z-index:-1;
+            transform: translateY(100%);
+            transition: transform  0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940), z-index .4s linear;
+          
+         
+   }
+   #szarvas-race {z-index:3; position: relative;}
+
+   .animated-modal {background:var(--blue-two); padding:60px;}
+
+.red-one {transition: background-color 1s ease!important;}
+   .red-reg-overlay:hover  {background: #222637!important; background-color:#222637!important; ;}
+
+   .red-reg-overlay a {outline:0!important;}
+
+   .opred-one {
+            z-index:0;}
+
+   .opred-two {z-index:1; opacity:1;   transform: translateY(0);}
+ 
+
+.red-reg-inner {  display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 4vw;}
+
+    .red-reg-overlay span {display:block;}
+    .red-reg-overlay a {display: grid; justify-content: center; text-decoration: none;
+   color:#fff;
+   transition: all .3s ease;
+text-align:center;}
+.watch {transition: color .3s ease;  padding-top:6px; font-weight: 500;}
+.money {font-weight:600;}
+.money, .watch {font-size:14px;}
+.kinspan {transition: opacity .2s linear;}
+
+
+.red-reg-overlay a:hover .watch {color:var(--lightblue); text-shadow: 0.6px 0 0 var(--lightblue); text-decoration:underline;}
+.red-reg-overlay a:hover .kinspan { opacity:.7;color:var(--lightblue);}
+
+.kinspan {font-size:26px; font-size:2.031vw; font-weight:700; padding-bottom:12px;} 
+
+.main-mob-logo-c {
+    width: 15.4vw;
+    position: absolute;
+    top: 4.5vw;
+    left: 6.3vw;
+    transform:none;
+}
+
+.oww-register {top:47vw;}
+
+.overlay-omszk h2 {margin-bottom: 20px; color:var(--lightblue); font-size:14px;  font-weight: 500;}
+.sec-overlay {margin-top:45px;}
+.second-inner {justify-content: start;}
+
+.small-overlay {padding-bottom:10px;}
+
+#animatedModal19 .red-reg-inner {grid-template-columns: auto auto;}
+
+@media only screen and (min-width: 500px)
+{.main-mob-logo-c {
+    position: absolute;
+    width: 80px;
+    position: absolute;
+    top: 15px;
+    left: 35px;
+}
+.oww-register {top:200px;}
+
+}
+
+@media only screen and (min-width: 1300px)
+{.money, .watch {
+    font-size: 1.029vw;
+}
+
+.small-overlay {padding-bottom:13px;}
+.overlay-omszk h2 {font-size: 1.176vw; font-weight: 400;}
+}
+
+@media only screen and (min-width: 1900px)
+
+{
+   .small-overlay {padding-bottom:16px;}
+   .money, .watch {
+    font-size: 19px
+}.kinspan {font-size:42px;}
+.overlay-omszk h2 {font-size:19px;}
+.red-reg-inner {grid-gap:58px;}
+}
+
+@media only screen and (max-width: 1190px)
+{.money, .watch {
+    font-size: 16px;
+}
+.kinspan {font-size:24px;}
+.overlay-omszk h2 {font-size:16px;font-weight: 400;}
+.watch {color:var(--lightblue); text-decoration:underline;}
+}
+
+@media only screen and (max-width: 520px)
+
+
+{.red-reg-inner {grid-template-columns: 1fr;}
+
+.towh {display:none;}
+.animated-modal {padding-top:40px; padding-bottom:50px;}
+.overlay-omszk h2 {text-align: center;}
+.kinspan {font-size:21px;}
+.watch {color:var(--lightblue); text-decoration:underline;}
+.kinspan { opacity:.7;color:var(--lightblue);}
+#animatedModal19 .red-reg-inner {grid-template-columns: 1fr; grid-gap:15px;}
+.red-reg-inner {grid-gap:15px;}
+}
+
+
+
+         .simple-register-link {text-decoration:underline!important;}
+         .gray-section .story .gen-text {padding-bottom:20px;}
+
+       
+
+         .gray-section .story {padding-bottom:25px;}
+         .notthis {display:none;}
+         .gray-section .places {
+    display: grid; 
+      }
+      .blue-section {display:none;}
+
+      @media only screen and (min-width: 500px)
+{.gray-section .places  {
+    
+    text-align: center;
+    margin-bottom: var(--bottomspacer);
+}
+
+
+.gray-section .story {padding-bottom:0;}
+}
+@media only screen and (min-width: 700px)
+{
+   .gray-section .places  {
+    width: 337px;
+    margin:auto;
+    margin-bottom: var(--bottomspacer);
+    grid-template-columns: 1fr 1fr;
+    text-align: center;}
+    .gray-section .places h2 {  grid-column: 1 / 3;}}
+
+    @media only screen and (min-width: 1099px)
+    {.gray-section .places {
+   grid-template-rows: auto;
+    grid-gap: 22%;
+    row-gap: 0;
+    max-width: 100%;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    width: 82%;
+    margin-top: 0;
+    z-index: 2;
+}
+.beke {color:var(--blue); background:var(--gray);}
+.beke:hover {
+    background: var(--blue);
+    color: white;
+}
+.gyek {background: var(--lightblue);}
+.place-button {
+    grid-row-start: 1;
+    align-self: start;
+}
+}
+@media only screen and (min-width: 1099px){.gray-section .story {
+   padding-bottom: 2.375vw;
+   text-align:left;
+}
+.darkblue-section .story {
+   padding-bottom: 2.375vw;}
+.gray-section .story .gen-text {padding-bottom:20px;}
+.gray-section .pics {margin-bottom:0;}
+}
+
+@media only screen and (min-width: 1299px)
+    {.gray-section .places {grid-gap: 26%;  width: 80%;}}
+      </style>
+   </head>
+   <body>
+      <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFK595P"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+     
+         <div style="display: none;" id="animatedModal17" class="animated-modal">
+            <div class="red-reg-overlay red-two opred-two">
+         <div class="overlay-omszk">
+              <h2>Omszki tó:</h2>
+               <div class="red-reg-inner">
+            <a href="https://www.google.com/" target="_blank" class="register-link-overlay">
+               <span class="kinspan">1K</span>
+               <span class="money">10.000 HUF</span>
+               <span class="watch">Regisztrálok</span>
+            </a>
+            <a href="https://www.google.com/" target="_blank" class="register-link-overlay">
+               <span class="kinspan">3K</span>
+               <span class="money">12.000 HUF</span>
+               <span class="watch">Regisztrálok</span>
+            </a>
+            <a href="https://www.google.com/" target="_blank" class="register-link-overlay">
+               <span class="kinspan">6K</span>
+               <span class="money">16.000 HUF</span>
+               <span class="watch">Regisztrálok</span>
+            </a>
+         </div>
+         </div>
+         <div class="overlay-omszk sec-overlay">
+            <h2>Gyékényes:</h2>
+             <div class="red-reg-inner second-inner">
+          <a href="https://www.google.com/" target="_blank" class="register-link-overlay">
+             <span class="kinspan">3K</span>
+             <span class="money">12.000 HUF</span>
+             <span class="watch">Regisztrálok</span>
+          </a>
+          <a href="https://www.google.com/" target="_blank" class="register-link-overlay">
+             <span class="kinspan">9K</span>
+             <span class="money">16.000 HUF</span>
+             <span class="watch">Regisztrálok</span>
+          </a>
+        
+       </div>
+       </div>
+            </div>
+        
+         </div>
+
+
+         
+         <div style="display: none;" id="animatedModal18" class="animated-modal">
+            <div class="red-reg-overlay red-two opred-two">
+         <div class="overlay-omszk">
+              <h2 style="text-align: center;" class="small-overlay">Omszki tó:</h2>
+               <div class="red-reg-inner">
+            <a href="https://www.google.com/" target="_blank" class="register-link-overlay">
+               <span class="kinspan">1K</span>
+               <span class="money">10.000 HUF</span>
+               <span class="watch">Regisztrálok</span>
+            </a>
+            <a href="https://www.google.com/" target="_blank" class="register-link-overlay">
+               <span class="kinspan">3K</span>
+               <span class="money">12.000 HUF</span>
+               <span class="watch">Regisztrálok</span>
+            </a>
+            <a href="https://www.google.com/" target="_blank" class="register-link-overlay">
+               <span class="kinspan">6K</span>
+               <span class="money">16.000 HUF</span>
+               <span class="watch">Regisztrálok</span>
+            </a>
+         </div>
+         </div>
+       
+            </div>
+        
+         </div>
+
+         <div style="display: none;" id="animatedModal19" class="animated-modal">
+            <div class="red-reg-overlay red-two opred-two">
+         <div class="overlay-omszk">
+              <h2 style="text-align: center;" class="small-overlay">Gyékényes:</h2>
+              <div class="red-reg-inner">
+               <a href="https://www.google.com/" target="_blank" class="register-link-overlay">
+                  <span class="kinspan">3K</span>
+                  <span class="money">12.000 HUF</span>
+                  <span class="watch">Regisztrálok</span>
+               </a>
+               <a href="https://www.google.com/" target="_blank" class="register-link-overlay">
+                  <span class="kinspan">9K</span>
+                  <span class="money">16.000 HUF</span>
+                  <span class="watch">Regisztrálok</span>
+               </a>
+             
+            </div>
+         </div>
+       
+            </div>
+        
+         </div>
+
+      <!-- End Google Tag Manager (noscript) -->
+      <nav>
+         <div class="mobile-menu">
+            <a href="" class="moba">
+            </a>
+           <!--  <div class="langselector"><a class="active-lang">HUN</a><br><a href="/home">ENG</a></div>-->
+            <div class="menu-icon" style="cursor:pointer" onclick="openNav()">
+               <div id="nav-icon1" class="">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+            </div>
+         </div>
+         <img src="img/logo-blue.png" class="main-mob-logo-c" alt="Open Water Tournament logó">
+         <div id="mySidenav" class="sidenav">
+            <!--<a href="#pks" onclick="closeNav()" id="m-c" class="animated">Balatonfűzfő</a>-->
+            <a href="#blt" onclick="closeNav()" id="m-c" class="animated">Omszki-tó</a>
+            <a href="#szv" onclick="closeNav()" id="m-c-2" class="animated-2">Gyékényes</a>
+            <a href="/rolunk" onclick="closeNav()" id="m-c-3" class="animated-3">Rólunk</a>
+            <a href="#contact" onclick="closeNav()" id="m-c-4" class="animated-4">Kapcsolat</a>
+         </div>
+      </nav>
+      <div class="first-container">
+         <a href="#place"><img src="img/arrow-lightblue.svg" class="arrow-pic-ow first-d-arrow" alt="Nyíl a helyekhez"></a>
+         <div class="first-block">
+            <div class="opener">
+               <h1><img src="img/logo-white.png" class="main-pc-logo" alt="Open Water logó" style="cursor:pointer" onclick="location.href='/'">Open Water Tournament</h1>
+             <!--   <img src="img/hun-mob.png" alt="Magyarország logó" class="hun-mob animated-5 fadeInLogo" />-->
+               <a data-fancybox data-animation-duration="400" data-src="#animatedModal17" href="javascript:void(0)" class="oww-register animated-6 fadeIn" target="_blank" rel="noopener noreferrer">Regisztráció</a>
+              <!-- <a   class="oww-register animated-6 fadeIn soonregister">Regisztráció (Hamarosan)</a> -->
+               <div class="welcome-text pc-block">
+                  <p>
+                     Idén két versennyel indulunk. Az első  egy - sokunk számára - gyerekkori emlék lesz, ahol akkor sem és most sem lehet fürdeni. Most viszont megkaptuk az önkormányzat jóváhagyását, hogy először rendezzünk versenyt az OMSZKI-tóban! A versenyközpontot strandként lehet majd használni és természetesen készülünk egy évindító strand-bulikával is! A második, és egyben záró helyszínt nem kell bemutatnunk, GYÉKÉNYEST ismeritek! Aki még nem volt, ússzon egyet velünk az átlátszó búvártóban! Az évadzáró bulika idén sem marad el! A versenyek támogatói idén is TI vagytok, ezért várunk benneteket!
+                    <a href="/rolunk" class="last-button">Rólunk</a>
+                  </p>
+               </div>
+            </div>
+            <div class="second-block">
+              <!--  <img src="img/hun.jpg" class="hungary-logo" alt="Magyarország logó" />
+           <div class="langselector"><a href="" class="active-lang">HUN</a> / <a href="/home">ENG</a></div> -->
+              <a data-fancybox data-animation-duration="400" data-src="#animatedModal17" href="javascript:void(0)" class="i-register" target="_blank" rel="noopener noreferrer">Regisztráció</a>
+              <!-- <a   class="i-register">Regisztráció (Hamarosan)</a> -->
+            </div>
+            <div class="welcome-text mobile-block">
+               <p>
+                  Idén két versennyel indulunk. Az első  egy - sokunk számára - gyerekkori emlék lesz, ahol akkor sem és most sem lehet fürdeni. Most viszont megkaptuk az önkormányzat jóváhagyását, hogy először rendezzünk versenyt az OMSZKI-tóban! A versenyközpontot strandként lehet majd használni és természetesen készülünk egy évindító strand-bulikával is! A második, és egyben záró helyszínt nem kell bemutatnunk, GYÉKÉNYEST ismeritek! Aki még nem volt, ússzon egyet velünk az átlátszó búvártóban! Az évadzáró bulika idén sem marad el! A versenyek támogatói idén is TI vagytok, ezért várunk benneteket! 
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="blue-section">
+         <div class="oww-first-grid">
+            <div class="color-layer"></div>
+        
+            <div class="local-hero" id="pks">
+               <h2>Balatonfűzfő</h2>
+            </div>
+            <div class="story" id="paks">
+               <h2 class="story-two">Balaton</h2>
+               <h3 class="bold-text">A verseny</h3>
+               <p class="gen-text">A Fűzfői-öböl a Balaton legészakibb része a keleti medencében. A versenyközpontot a balatonalmádi Budatava strandon építjük fel, innen visszük az úszókat Balatonfűzfőre, ahol a középtáv úszói 3 km-t nyílegyenesen úszva érik el a CÉL-t, a Budatava strandot. A hosszútáv úszói ezt a távot háromszor teszik meg (oda-vissza-oda). A jellemzően délkeleti széljárás a hosszútáv úszóinak vissza útját jelentősen megnehezítheti.</p>
+               <h3 class="bold-text">Távok</h3>
+               <p class="gen-text"><span class="boldi">3K</span> | Balatonfűzfő Zagykazetta - Balatonalmádi Budatava<br /><span class="boldi">9K</span> | Balatonfűzfő Zagykazetta - Balatonalmádi Budatava
+               </p>
+               <h3 class="bold-text">Verseny Időpontja: 2022.06.25. - 08:00-18:00</h3> 
+
+               <a href="https://docs.google.com/document/d/1ytOSS4M9BrFu5-uvGxa73fgFI5Xl4c1vd7zj7ECGcGQ/edit" class="race-down" target="_blank" rel="noopener noreferrer">Versenyleírás letöltése</a>
+            </div>
+            <div class="pics">
+               <div class="gallery-open open-gallery-1">
+                  <div class="gallery-overlay"></div>
+                  <div class="texticon-container">
+                     <img src="img/plus.svg" class="arrow-pic-ow" alt="Nyíl a galériához">
+                     <p class="gen-text specwhite">Galéria</p>
+                  </div>
+               </div>
+               <div class="video-open open-video-1">
+                  <div class="video-overlay"></div>
+                  <div class="texticon-container">
+                     <img src="img/arrow-one.svg" class="arrow-pic-ow" alt="Nyíl a helyekhez">
+                     <p class="gen-text specwhite">Videó <span class="play">lejátszása</span></p>
+                  </div>
+               </div>
+            </div>
+
+            <a href="https://raceid.com/en/races/8246/" class="register-paks but-1-back" target="_blank" rel="noopener noreferrer">Regisztráció</a> 
+ 
+         </div>
+          <a href="https://raceid.com/en/races/8246/" class="red-reg" target="_blank" rel="noopener noreferrer">
+            <p class="go-to-the-reg">Regisztráció<img src="img/arrow-one.svg" class="arrow-pic-ow padder-arrow" alt="Nyíl a regisztrációhoz"></p>
+         </a> 
+  
+      </div>
+      </div>
+      <div class="gray-section">
+         <div class="oww-first-grid">
+            <div class="color-layer"></div>
+            <div class="places" id="place">
+               <h2>Helyszínek:</h2>
+               <a href="#pks" class="place-button but-1-back first-but npc notthis">Balatonfűzfő</a>
+               <a href="#blt" class="place-button but-3-back third-but npc">Omszki-tó</a>
+               <a href="#szv" class="place-button but-2-back second-but npc">Gyékényes</a>
+               <a href="#place" class="place-button but-1-back first-but pc notthis">Balatonfűzfő</a>
+               <a href="#balaton" class="place-button but-3-back third-but pc beke">Omszki-tó</a>
+               <a href="#szarvas-race" class="place-button but-2-back second-but pc gyek">Gyékényes</a>
+            </div>
+            <div class="local-hero" id="blt">
+               <h2>Omszki-tó</h2>
+            </div>
+            <div class="story" id="balaton">
+               <h2 class="story-two">Omszki-tó</h2>
+               <h3 class="bold-text">2024. június 29.</h3>
+               <p class="gen-text">Az Omszki-tó sokunk fiatalságát idézi. A tóhoz kapcsolódóan strand és vízi biztosítás nem került kiépítésre, így a fürdőzés tilos. Az OWT a Budakalászi Önkormányzattal együttműködve nyitja meg a tavat az úszók számára 2024. június 29-én!
+               </p>
+             
+               <h3 class="bold-text">Távok, nevezési díjak </h3>
+               <p class="gen-text"> <span class="boldi" style="padding-left:4px;">1K</span>  | 1 kör - 10.000 - <a href="https://www.google.com/" target="_blank" class="simple-register-link">regisztrálok<span class="towh"> erre a távra</span></a> <br>
+                 
+                  <span class="boldi">3K</span> | 3 kör - 12.000 - <a href="https://www.google.com/" target="_blank" class="simple-register-link">regisztrálok<span class="towh"> erre a távra</span></a><br>
+                  <span class="boldi">6K</span> |  6 kör - 16.000 - <a href="https://www.google.com/" target="_blank" class="simple-register-link">regisztrálok<span class="towh"> erre a távra</span></a><br>
+                 </p>
+                 <h3 class="bold-text">Helyszínek:</h3>
+                 <p class="gen-text" style="padding-bottom:0;">Start / Cél: Omszk - Homokpad, Versenyközpont: Omszk Sport - sporttelep</p>
+                
+                 <a href="https://www.google.com/" class="race-down" target="_blank">Versenyleírás letöltése</a>
+                 
+               </div>
+            <div class="pics">
+               <div class="gallery-open open-gallery-2">
+              
+               </div>
+               <div class="video-open open-video-2" style="cursor:default">
+                  <div class="texticon-container">
+
+                  </div>
+               </div>
+            </div>
+            <a href="#" data-fancybox="" data-animation-duration="400" data-src="#animatedModal18" class="register-paks but-1-back" style="background: var(--blue); color:white; min-width:236px">Regisztráció - Omszki-tó</a>
+        
+         </div>
+         <div class="red-reg red-one" data-fancybox data-animation-duration="400" data-src="#animatedModal18" style="cursor:pointer;"><p 
+          
+            class="go-to-the-reg">Regisztráció<img src="img/arrow-one.svg" class="arrow-pic-ow padder-arrow" alt="Nyíl a regisztrációhoz"></p></div>
+       
+       
+
+      </div>
+
+      <div class="darkblue-section">
+         <div class="oww-first-grid" id="szarvas-race">
+            <div class="color-layer"></div>
+            <div class="places">
+               <a href="#szarvas"><img src="img/arrow-lightblue.svg" class="arrow-pic-ow first-d-arrow db-arrow" alt="Nyíl a helyekhez"></a>
+            </div>
+      
+            <div class="local-hero" id="szv">
+               <h2>Gyékényes</h2>
+            </div>
+            <div class="story" id="szarvas">
+               <h2 class="story-two">Gyékényes</h2>
+               <h3 class="bold-text">2024. június 29.</h3>
+               <p class="gen-text">Gyékényes Nagykanizsától délre, alig 30 perces autóútra fekszik. A bányató mélysége 20-30 méter, a kavicsos medernek köszönhetően pedig olyan tiszta, hogy a vízalatti látótávolság akár 10 méter is lehet. A tó déli partján egy nemzetközi hírű búvárbázis működik, mely az OWT versenyközpontja is egyben. A búvárok a látványosság kedvéért több megtisztított roncsot süllyesztettek el a vízben, így a merülők láthatnak motorcsónakot, autót és vízibiciklit is.  
+               </p>
+               <h3 class="bold-text">Távok, nevezési díjak</h3>
+               <p class="gen-text"><span class="boldi">3K</span> | 1 kör - 12.000 - <a href="https://www.google.com/" target="_blank" class="simple-register-link">regisztrálok<span class="towh"> erre a távra</span></a></span><br>
+                  <span class="boldi">9K</span> | 3 kör - 16.000 - <a href="https://www.google.com/" target="_blank" class="simple-register-link">regisztrálok<span class="towh"> erre a távra</span></a></span>
+               </p>
+              
+               
+               <a href="https://docs.google.com/document/d/1s7BakDqbgP0Wi5c_fgqrNr-nLW16vyP3Kb6X0HKlm7c/edit" class="race-down" target="_blank" rel="noopener noreferrer">Versenyleírás letöltése</a>
+            </div>
+            <div class="pics">
+               <div class="gallery-open open-gallery-3">
+                  <div class="gallery-overlay"></div>
+                  <div class="texticon-container">
+                     <img src="img/plus.svg" class="arrow-pic-ow" alt="Nyíl a galériához">
+                     <p class="gen-text specwhite">Galéria</p>
+                  </div>
+               </div>
+               <div class="video-open open-video-3" onclick="openSite()">
+                  <div class="video-overlay"></div>
+                  <div class="texticon-container">
+                     <img src="img/arrow-one.svg" class="arrow-pic-ow" alt="Nyíl a videóhoz">
+                     <p class="gen-text specwhite">Videó <span class="play">lejátszása</span></p>
+                  </div>
+               </div>
+            </div>
+            <a href="https://raceid.com/en/races/8571/" class="register-paks but-3-back" style="color:white;" target="_blank" rel="noopener noreferrer">Regisztráció</a> 
+       
+         </div>
+        <a href="#" data-fancybox data-animation-duration="400" data-src="#animatedModal19" class="red-reg" target="_blank" rel="noopener noreferrer" style="z-index:10">
+            <p class="go-to-the-reg">Regisztráció<img src="img/arrow-one.svg" class="arrow-pic-ow padder-arrow" alt="Nyíl a regisztrációhoz"></p>
+         </a> 
+      
+      </div>
+
+      <footer id="contact">
+         <img src="img/logo-blue.png" class="oww-footer-logo" alt="Open Water logó">
+         <p class="bold-text centerbold">Kapcsolat</p>
+         <p class="gen-text centerbold f-hdr">hello@openwatertournament.hu</p>
+         <p class="gen-text centerbold f-hdr">+36 30 998 65 30</p>
+         <div class="logos-of-footer">
+            <a href="https://www.facebook.com/openwatertournament/"><img src="img/fb.svg"  alt="facebook logo" class="b-logos"></a>
+            <a href="https://www.instagram.com/openwatertournament/"><img src="img/in.svg"  alt="instagram logo" class="b-logos"></a>
+         </div>
+         
+      <div class="bold-text centerbold ahref"></div>
+      </footer>
+      @include('cookie_consent', ['lang' => 'hu'])
+      <script src="includes/jquery-3.4.1.min.js"></script>
+      <script src="includes/jquery.fancybox.min.js?2"></script>
+      <script>
+  
+ 
+         $(document).ready(function () {
+          /*  $('.open-video-1').click(function () {
+               $.fancybox.open(
+                  [
+                     {
+                    
+                        src: 'video/OWT_AFTER_2_PERCES_02.mp4',
+                     },
+                  ],
+                  {
+                     loop: false
+                  }
+               );
+            });
+
+            $('.open-gallery-1').click(function () {
+               $.fancybox.open(
+                  [
+                     {
+                        src: 'img/Balaton-WEB-IMG-1.jpg',
+                        opts: {
+                           thumb: 'img/Balaton-WEB-IMG-1.jpg'
+                        },
+                     },
+                     {
+                        src: 'img/Balaton-WEB-IMG-2.jpg',
+                        opts: {
+                           thumb: 'img/Balaton-WEB-IMG-2.jpg'
+                        },
+                     },
+                     {
+                        src: 'img/Balaton-WEB-IMG-3.jpg',
+                        opts: {
+                              caption : 'További képek a <a href="https://www.facebook.com/openwatertournament/photos/" target="_blank">Facebook oldalunkon</a>',
+                              thumb: 'img/Balaton-WEB-IMG-3.jpg'
+                        },
+                     },
+                  ],
+                  {
+                     loop: false
+                  }
+               );
+            });
+
+            /* $('.open-video-2').click(function () {
+               $.fancybox.open(
+                  [
+                     {
+                        //src: 'https://www.youtube.com/watch?v=no0JgiC-RM0vq=hd1080',
+                        src: 'video/Gyekenyes.mp4',
+                     },
+                  ],
+                  {
+                     loop: false
+                  }
+               );
+            }); 
+
+            $('.open-gallery-2').click(function () {
+               $.fancybox.open(
+                  [
+                     {
+                        src: 'img/Paks-WEB-IMG-1.jpg',
+                        opts: {
+                           thumb: 'img/Paks-WEB-IMG-1.jpg'
+                        },
+                     },
+                     {
+                        src: 'img/Paks-WEB-IMG-2.jpg',
+                        opts: {
+                           thumb: 'img/Paks-WEB-IMG-2.jpg'
+                        },
+                     },
+                     {
+                        src: 'img/Paks-WEB-IMG-3.jpg',
+                        opts: {
+                           thumb: 'img/Paks-WEB-IMG-3.jpg'
+                        },
+                     },
+                     {
+                        src: 'img/Paks-WEB-IMG-4.jpg',
+                        opts: {
+                           thumb: 'img/Paks-WEB-IMG-4.jpg'
+                        },
+                     },
+                     {
+                        src: 'img/Paks-WEB-IMG-5.jpg',
+                        opts: {
+                           thumb: 'img/Paks-WEB-IMG-5.jpg'
+                        },
+                     },
+                     {
+                        src: 'img/Paks-WEB-IMG-6.jpg',
+                        opts: {
+                           thumb: 'img/Paks-WEB-IMG-6.jpg'
+                        },
+                     },
+                  ],
+                  {
+                     loop: false
+                  }
+               );
+            }); */
+
+            
+            $('.open-gallery-3').click(function () {
+               $.fancybox.open(
+                  [
+                     {
+                        src: 'img/Gyekenyes-WEB-IMG-1.jpg',
+                        opts: {
+                           thumb: 'img/Gyekenyes-WEB-IMG-1.jpg'
+                        },
+                     },
+                     {
+                        src: 'img/Gyekenyes-WEB-IMG-2.jpg',
+                        opts: {
+                           thumb: 'img/Gyekenyes-WEB-IMG-2.jpg'
+                        },
+                     },
+                     {
+                        src: 'img/Gyekenyes-WEB-IMG-3.jpg',
+                        opts: {
+                           thumb: 'img/Gyekenyes-WEB-IMG-3.jpg'
+                        },
+                     },
+                     {
+                        src: 'img/gy-1.jpg',
+                        opts: {
+                           thumb: 'img/gy-1.jpg'
+                        },
+                     },
+                     {
+                        src: 'img/gy-2.jpg',
+                        opts: {
+                           caption : 'További képek a <a href="https://www.facebook.com/openwatertournament/photos/" target="_blank">Facebook oldalunkon</a>',
+                           thumb: 'img/gy-2.jpg'
+                        },
+                     },
+                     /* {
+                        src: 'img/Szarvas-WEB-IMG-1.jpg',
+                        opts: {
+                           thumb: 'img/Szarvas-WEB-IMG-1.jpg'
+                        },
+                     },
+                     {
+                        src: 'img/Szarvas-WEB-IMG-2.jpg',
+                        opts: {
+                           thumb: 'img/Szarvas-WEB-IMG-2.jpg'
+                        },
+                     },
+                     {
+                        src: 'img/Szarvas-WEB-IMG-3.jpg',
+                        opts: {
+                           thumb: 'img/Szarvas-WEB-IMG-3.jpg'
+                        },
+                     }, */
+                  ],
+                  {
+                     loop: false
+                  }
+               );
+            });
+         });
+
+         function openNav() {
+           var navIcon = document.querySelector("#nav-icon1");
+           var navfirst = document.querySelector("#m-c");
+           var navsec = document.querySelector("#m-c-2");
+           var navth = document.querySelector("#m-c-3");
+           var navfour = document.querySelector("#m-c-4");
+           
+           var mySidenav = document.querySelector("#mySidenav");
+           navIcon.classList.toggle("open");
+           navfirst.classList.toggle("fadeInDown");
+           navsec.classList.toggle("fadeInDown");
+           navth.classList.toggle("fadeInDown");
+           navfour.classList.toggle("fadeInDown");
+   
+           mySidenav.classList.toggle("open-sidemenu");
+         }
+
+         function closeNav() {
+           var navIcon = document.querySelector("#nav-icon1");
+           var navfirst = document.querySelector("#m-c");
+           var navsec = document.querySelector("#m-c-2");
+           var navth = document.querySelector("#m-c-3");
+           var navfour = document.querySelector("#m-c-4");
+    
+           var mySidenav = document.querySelector("#mySidenav");
+           navIcon.classList.remove("open");
+           navfirst.classList.remove("fadeInDown");
+           navsec.classList.remove("fadeInDown");
+           navth.classList.remove("fadeInDown");
+           navfour.classList.remove("fadeInDown");
+         
+           mySidenav.classList.remove("open-sidemenu");
+         }
+
+   
+
+         function openSite() {
+  window.open("https://www.facebook.com/openwatertournament/videos/3098429057052852");
+}
+
+      </script>
+   <!--    <script>
+         
+        /*    window["bp"] = window["bp"] || function () {
+                (window["bp"].q = window["bp"].q || []).push(arguments);
+            };
+            window["bp"].l = 1 * new Date();
+
+           
+            scriptElement = document.createElement("script");
+            firstScript = document.getElementsByTagName("script")[0];
+            scriptElement.async = true;
+            scriptElement.src = 'https://pixel.barion.com/bp.js';
+            firstScript.parentNode.insertBefore(scriptElement, firstScript);
+
+            
+            bp('init', 'addBarionPixelId', 'BP-g4Rq5FBXJJ-07');*/
+        </script>
+          <noscript>
+         <img height="1" width="1" style="display:none" alt="Barion Pixel" src="https://pixel.barion.com/a.gif?ba_pixel_id='BP-g4Rq5FBXJJ-07'&ev=contentView&noscript=1">
+        </noscript>-->
+
+   </body>
+</html>
