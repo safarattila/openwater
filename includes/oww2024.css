@@ -889,8 +889,8 @@ justify-self:center;
 
 
     .local-hero {height:80vw; position:relative;
-      background-image: url(../img/2022/1230x600-Balaton.jpg);
-     /* background: linear-gradient(to top, rgba(48, 207, 208, 0.1) 0%, rgba(51, 8, 103, 0.6) 100%), url(../img/paks.jpg);*/
+     /* background-image: url(../img/2022/1230x600-Balaton.jpg);
+      background: linear-gradient(to top, rgba(48, 207, 208, 0.1) 0%, rgba(51, 8, 103, 0.6) 100%), url(../img/paks.jpg);*/
    background-size: cover;
    background-position: 0% 50%;
     text-align:center;
@@ -994,7 +994,7 @@ justify-self:center;
 .darkblue-section .local-hero {background-image: url(../img/2022/1230x600-Gyekenyes.jpg);
   background-position: 50% 50%;}
 
-  .gray-section .local-hero {background-image: url(../img/2022/1230x600-Bekes.jpg);
+  .gray-section .local-hero {background-image: url(../img/omszkpark2.jpg);
     background-position: 50% 50%;}
 
 
