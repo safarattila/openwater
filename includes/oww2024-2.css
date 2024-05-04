@@ -1797,7 +1797,7 @@ transform: translate(-50%);
 .hun-mob {width: 200px;
 top: 146px;
 }
-.gray-section .gallery-open{background-size: 120%;}
+.gray-section .gallery-open{background-size: 132%;}
 }
 
 .hungary-logo {position: absolute;
@@ -1810,6 +1810,7 @@ display:none;}
   .gray-section .gallery-open{background-size: cover;}
 .hungary-logo {display:block; width:18vw;top: 46px;
 }
+
 .hun-mob {display:none;}
 }
 

@@ -207,6 +207,9 @@ text-align:center;}
     margin-top: 0;
     z-index: 2;
 }
+.g2-cont img, .g2-cont .specwhite {transition: .2s cubic-bezier(0.25,1,0.5,1);}
+.g-over:hover .g2-cont img {filter: brightness(0) invert(1);}
+.g-over:hover .specwhite {color:white!important;}
 .beke {color:var(--blue); background:var(--gray);}
 .beke:hover {
     background: var(--blue);
@@ -357,7 +360,7 @@ text-align:center;}
                <div class="welcome-text pc-block">
                   <p>
                      Idén két versennyel indulunk. Az első egy sokak számára szerelem, azaz a DUNA. Ráadásul nem is megyünk messze Budapesttől! Szentendréről, a Postás strandról indultok, majd Budakalászon a Küllő bár és az Ebihal büfé között fogtok kiszállni. Innen busszal viszünk vissza titeket a szentendrei versenyközpontba. GYÉKÉNYEST ismeritek! Aki még nem volt, ússzon egyet velünk az átlátszó búvártóban! Az évadzáró bulika idén sem marad el! A versenyek támogatói idén is TI vagytok, ezért várunk minden kezdő víz-bolondot, úszva a tájban gyönyörködőt, amatőr és profi versenyzőt.
-                    <a href="/rolunk" class="last-button" style="pointer-events: none;">Rólunk</a>
+                    <a href="/rolunk" class="last-button">Rólunk</a>
                   </p>
                </div>
             </div>
@@ -451,10 +454,14 @@ text-align:center;}
                  
                </div>
             <div class="pics">
-               <div class="gallery-open open-gallery-2" style="pointer-events: none;">
-              
+               <div class="gallery-open open-gallery-2 g-over">
+                  <div class="gallery-overlay"></div>
+                  <div class="texticon-container g2-cont">
+                     <img src="img/plus-dark.svg" class="arrow-pic-ow" alt="Nyíl a galériához">
+                     <p class="gen-text specwhite" style="color:var(--blue)">Galéria</p>
+                  </div>
                </div>
-               <div class="video-open open-video-2" style="cursor:default">
+               <div class="video-open open-video-2" style="cursor:pointer">
                   <div class="texticon-container">
 
                   </div>
@@ -550,28 +557,44 @@ text-align:center;}
                      loop: false
                   }
                );
-            });
+            });*/
 
-            $('.open-gallery-1').click(function () {
+            $('.open-gallery-2').click(function () {
                $.fancybox.open(
                   [
                      {
-                        src: 'img/Balaton-WEB-IMG-1.jpg',
+                        src: 'img/img-map-o.jpg',
                         opts: {
-                           thumb: 'img/Balaton-WEB-IMG-1.jpg'
+                           thumb: 'img/img-map-o.jpg'
                         },
                      },
                      {
-                        src: 'img/Balaton-WEB-IMG-2.jpg',
+                        src: 'img/szentendre-pic.jpg',
                         opts: {
-                           thumb: 'img/Balaton-WEB-IMG-2.jpg'
+                           thumb: 'img/szentendre-pic.jpg'
+                        },
+                     },
+                  ],
+                  {
+                     loop: false
+                  }
+               );
+            });
+
+            $('.open-video-2').click(function () {
+               $.fancybox.open(
+                  [
+                     {
+                        src: 'img/szentendre-pic.jpg', 
+                        opts: {
+                           thumb: 'img/szentendre-pic.jpg'
                         },
                      },
                      {
-                        src: 'img/Balaton-WEB-IMG-3.jpg',
+                        src: 'img/img-map-o.jpg',
                         opts: {
-                              caption : 'További képek a <a href="https://www.facebook.com/openwatertournament/photos/" target="_blank">Facebook oldalunkon</a>',
-                              thumb: 'img/Balaton-WEB-IMG-3.jpg'
+                           caption : 'További képek a <a href="https://www.facebook.com/openwatertournament/photos/" target="_blank">Facebook oldalunkon</a>',
+                           thumb: 'img/img-map-o.jpg.jpg'
                         },
                      },
                   ],
